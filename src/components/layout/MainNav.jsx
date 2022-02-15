@@ -5,7 +5,7 @@ import classes from "./MainNav.module.css";
 const MainNav = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>React Meetups</div>
+      <div className={classes.logo}>Epigie Meetups</div>
       <nav>
         <ul>
           <li>

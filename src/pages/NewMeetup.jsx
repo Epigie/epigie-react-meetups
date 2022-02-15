@@ -1,13 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
 const NewMeetupPage = () => {
-  const location = useLocation();
+  const navigate = useNavigate();
 
   const addMeetupHandler = (meetupData) => {
     fetch(
-      "https://react-getting-started-48dec-default-rtdb.firebaseio.com/meetups.json",
+      "https://react-meetups-2b66e-default-rtdb.firebaseio.com/meetups.json",
       {
         method: "POST",
         body: JSON.stringify(meetupData),
@@ -16,7 +16,7 @@ const NewMeetupPage = () => {
         },
       }
     ).then(() => {
-      location.replace("/");
+      navigate("/", { replace: true });
     });
   };
 
