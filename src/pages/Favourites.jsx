@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import FavoritesContext from "../store/favorites-context";
+import FavoritesContext from "../store/favouritesContext";
 import MeetupList from "../components/meetups/MeetupList";
 
 const FavoritesPage = () => {
